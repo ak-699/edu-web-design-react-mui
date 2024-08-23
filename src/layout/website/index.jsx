@@ -1,5 +1,11 @@
+import Header from "./header";
+
 function WebsiteLayout() {
-  return <p>this is website layout</p>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default WebsiteLayout;

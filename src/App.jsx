@@ -1,3 +1,4 @@
+import WebsiteLayout from "./layout/website";
 import { LoginView } from "./sections/login";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <p>hello abhishek</p>
       <LoginView />
+      <WebsiteLayout />
     </>
   );
 }
