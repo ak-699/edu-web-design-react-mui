@@ -10,7 +10,6 @@ const overrides = (theme) => ({
     styleOverrides: {
       root: {
         textDecoration: "none",
-        color: theme.palette.pink.main,
       },
     },
   },

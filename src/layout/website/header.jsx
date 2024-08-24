@@ -1,6 +1,18 @@
-import { Box, Button, Link, Stack, AppBar, Toolbar, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Link,
+  Stack,
+  AppBar,
+  Toolbar,
+  Typography,
+  useTheme,
+  IconButton,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Header() {
+  const theme = useTheme();
   return (
     <>
       <AppBar
@@ -28,6 +40,18 @@ function Header() {
           <Stack
             direction={"row"}
             spacing={2}
+            sx={{
+              [theme.breakpoints.down("md")]: {
+                display: "none",
+              },
+              "& .MuiButton-root": {
+                "& .MuiLink-root": {
+                  color: theme.palette.pink.main,
+                },
+
+                "&:hover .MuiLink-root": { color: theme.palette.violet.main },
+              },
+            }}
           >
             <Button>
               <Link href="#home">Home</Link>
@@ -48,6 +72,16 @@ function Header() {
               <Link href="#contact">Contact</Link>
             </Button>
           </Stack>
+
+          <IconButton
+            sx={{
+              [theme.breakpoints.up("md")]: {
+                display: "none",
+              },
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </>
