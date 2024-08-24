@@ -6,7 +6,9 @@ import palette from "./palette";
 let theme = createTheme({
   palette: palette,
   typography,
-  components: overrides(),
+});
+theme = createTheme(theme, {
+  components: overrides(theme),
 });
 
 theme = responsiveFontSizes(theme);

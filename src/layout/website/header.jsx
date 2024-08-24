@@ -12,9 +12,10 @@ function Header() {
           left: "50%",
           transform: "translateX(-50%)",
           borderRadius: "100px",
+          bgcolor: "white",
         }}
       >
-        <Toolbar sx={{ bgcolor: "white" }}>
+        <Toolbar>
           <Box>
             <Typography
               variant="h6"
